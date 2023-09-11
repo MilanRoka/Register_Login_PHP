@@ -8,6 +8,7 @@
         <li><a href="#contact">Contact</a></li>
         <li><a href="login.php">Login</a></li>
         <li><a href="register.php">Register</a></li>
+        <li><a href="#">Logout</a></li>
     </ul>
     <div class="burger-menu">
         <div class="bar"></div>

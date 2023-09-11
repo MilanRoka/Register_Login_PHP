@@ -15,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Perform basic validation
     if (empty($name) || empty($email) || empty($password) || empty($confirmPassword)) {
         echo '<script>alert("All fields are required.")</script>';
-
     } elseif ($password !== $confirmPassword) {
         echo '<script>alert("Passwords do not match.")</script>';
     } else {
@@ -55,6 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input required autocomplete="new-password" type="password" name="confirm-password" placeholder="Confirm your password" />
         </div>
         <button class="messageBtn" type="submit">Register</button>
+        <span>Already have an account!<a href="login.php">Login</a></span>
+
     </form>
 </div>
 

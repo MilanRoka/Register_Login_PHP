@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input required autocomplete="current-password" type="password" name="password" placeholder="Enter your password" />
         </div>
         <button class="messageBtn" type="submit">Login</button>
+        <span>Don't have an account!<a href="register.php">Register</a></span>
     </form>
 </div>
 <?php include 'footer.php'; ?>

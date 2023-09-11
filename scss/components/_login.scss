@@ -1,4 +1,4 @@
-$form-bg:#4E9F3D;
+$form-bg: linear-gradient(to right bottom, green, yellow);
 $button-bg: #D8E9A8;
 $button-hover: #191A19;
 
@@ -6,8 +6,9 @@ $button-hover: #191A19;
     display: flex;
     justify-content: center;
     margin: 0 30vw;
-    padding: 5vw;
-    background-color: $form-bg;
+    padding: 2vw;
+    // background-color: $form-bg;
+    background: $form-bg;
     border-radius: 1vw;
     box-shadow: 5px 10px #1E5128;
 }
@@ -29,6 +30,7 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
+    font-size: 1vw;
     height: 3vw;
     width: 25vw;
     margin: 0 3vw 0 3vw;
