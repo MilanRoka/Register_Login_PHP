@@ -1,0 +1,70 @@
+/* Define variables */
+$nav-color: #4E9F3D;
+$nav-hover-color: #fff;
+$navbar-bg-color: #191A19;
+$navbar-bg-hover-color: #3F72AF;
+$navbar-text-color: #fff;
+$navbar-link-color: #fff;
+$hover-color: #ff5722;
+$navbar-padding: 1vw;
+
+
+.navbar {
+    background-color: $navbar-bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        a {
+            margin-left: 3.5vw;
+       
+            img {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin-right: 3.5vw;
+
+
+        li {
+            margin-left: 2vw;
+
+            a {
+                padding: 0.5vw;
+                font-size: 1.1vw;
+                text-decoration: none;
+                color: $nav-color;
+                transition: color 0.3s;
+
+                &:hover {
+                    padding: 0.5vw;
+                    border-radius: 0.5vw;
+                    background-color: $nav-hover-color;
+                    color: $navbar-bg-color;
+                }
+            }
+        }
+    }
+
+    .burger-menu {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+
+        .bar {
+            width: 4vw;
+            height: 0.4vw;
+            background-color: #fff;
+            margin: 0.5vw 4vw;
+        }
+    }
+
+    
+}

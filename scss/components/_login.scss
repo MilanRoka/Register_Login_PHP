@@ -1,0 +1,62 @@
+$form-bg:#4E9F3D;
+$button-bg: #D8E9A8;
+$button-hover: #191A19;
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin: 0 30vw;
+    padding: 5vw;
+    background-color: $form-bg;
+    border-radius: 1vw;
+    box-shadow: 5px 10px #1E5128;
+}
+
+/* Style the form elements */
+.form-group {
+    margin: 15px 0;
+    display: block;
+
+}
+
+label {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0 3vw 0 3vw;
+
+
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    height: 3vw;
+    width: 25vw;
+    margin: 0 3vw 0 3vw;
+    border-radius: 0.5vw;
+    padding: 0 1vw;
+}
+
+/* Style the Login button */
+.messageBtn {
+    display: block;
+    width: 5vw;
+    padding: 10px;
+    background-color: $button-bg;
+    /* Add your desired button background color */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Center the Login button */
+.messageBtn {
+    font-size: 1vw;
+    margin: 0 auto;
+
+    &:hover {
+        background-color: $button-hover;
+        color: #fff;
+    }
+}

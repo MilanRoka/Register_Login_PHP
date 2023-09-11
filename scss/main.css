@@ -1,0 +1,147 @@
+h1 {
+  font-size: 3vw;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  padding: 0%;
+  margin: 0%;
+  background-color: #D8E9A8;
+}
+
+/* Define variables */
+.navbar {
+  background-color: #191A19;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo a {
+  margin-left: 3.5vw;
+}
+.navbar .logo a img {
+  width: 5vw;
+  height: 5vw;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-right: 3.5vw;
+}
+.navbar .nav-links li {
+  margin-left: 2vw;
+}
+.navbar .nav-links li a {
+  padding: 0.5vw;
+  font-size: 1.1vw;
+  text-decoration: none;
+  color: #4E9F3D;
+  transition: color 0.3s;
+}
+.navbar .nav-links li a:hover {
+  padding: 0.5vw;
+  border-radius: 0.5vw;
+  background-color: #fff;
+  color: #191A19;
+}
+.navbar .burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.navbar .burger-menu .bar {
+  width: 4vw;
+  height: 0.4vw;
+  background-color: #fff;
+  margin: 0.5vw 4vw;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar .burger-menu {
+    display: flex;
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4.8vw;
+    left: 81.9vw;
+    background-color: #191A19;
+    width: 18%;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .navbar .nav-links.active {
+    display: flex;
+  }
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+  .navbar .nav-links li a {
+    color: #fff;
+    font-size: 18px;
+  }
+}
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 0 30vw;
+  padding: 5vw;
+  background-color: #4E9F3D;
+  border-radius: 1vw;
+  box-shadow: 5px 10px #1E5128;
+}
+
+/* Style the form elements */
+.form-group {
+  margin: 15px 0;
+  display: block;
+}
+
+label {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 0 3vw 0 3vw;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  height: 3vw;
+  width: 25vw;
+  margin: 0 3vw 0 3vw;
+  border-radius: 0.5vw;
+  padding: 0 1vw;
+}
+
+/* Style the Login button */
+.messageBtn {
+  display: block;
+  width: 5vw;
+  padding: 10px;
+  background-color: #D8E9A8;
+  /* Add your desired button background color */
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Center the Login button */
+.messageBtn {
+  font-size: 1vw;
+  margin: 0 auto;
+}
+.messageBtn:hover {
+  background-color: #191A19;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

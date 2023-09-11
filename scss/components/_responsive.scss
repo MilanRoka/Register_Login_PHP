@@ -1,0 +1,33 @@
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .navbar {
+        .burger-menu {
+            display: flex;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 4.8vw;
+            left: 81.9vw;
+            background-color: $navbar-bg-color;
+            width: 18%;
+            text-align: center;
+            transition: all 0.3s;
+
+            &.active {
+                display: flex;
+            }
+
+            li {
+                margin: 10px 0;
+
+                a {
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
