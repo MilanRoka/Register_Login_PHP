@@ -4,17 +4,21 @@
 <?php
 include 'config.php';
 
+if (isset($_SESSION['user_id'])) {
+    header('Location: welcome.php');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve user input from the form
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Perform basic validation
     if (empty($email) || empty($password)) {
         echo '<script>alert("Both email and password are required.")</script>';
     } else {
         // Perform user authentication
-        $query = "SELECT * FROM users WHERE email = '$email'"; //check if users email exists in database or not
+        $query = "SELECT * FROM users WHERE email = '$email'"; // Check if the user's email exists in the database
         $result = mysqli_query($con, $query);
 
         if ($result && mysqli_num_rows($result) > 0) {
@@ -22,11 +26,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hashedPassword = $row['password'];
 
             if (password_verify($password, $hashedPassword)) {
-                echo'<script>alert("Login successful. Welcome, ")</script>' ;
-                // You can redirect the user to their profile page or perform other actions here.
-                header('Location: index.php');
+                // Set the user ID in the session
+                $_SESSION['user_id'] = $row['id'];
+
+                header('Location: welcome.php');
+                exit();
             } else {
-                echo'<script>alert("Incorrect password. Please try again.")</script>' ;
+                echo '<script>alert("Incorrect password. Please try again.")</script>';
             }
         } else {
             echo '<script>alert("User with this email does not exist.")</script>';

@@ -25,11 +25,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_query($con, $query);
 
         if ($result) {
-            echo '<script>alert("Registration successful. You can now log in.") </script>';
+            echo '<script>alert("Registration successful. You can now log in.")</script>';
+            
+            // Set the session variable to indicate the user is logged in
+            $_SESSION['user_id'] = mysqli_insert_id($con); // Assuming you have an 'id' column in your 'users' table
+        
             header('Location: login.php');
         } else {
             echo '<script>alert("Registration failed. Please try again later.")</script>';
         }
+        
     }
 }
 ?>

@@ -13,7 +13,7 @@ $con = mysqli_connect(DB_SERVER, DB_USENAME, DB_PASSWORD, DB_NAME);
 
 //check connection
 if($con === false){
-    dir("Error: Could not connect.");
+    die("Error: Could not connect.");
 }
 
 ?>
